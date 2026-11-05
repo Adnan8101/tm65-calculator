@@ -1,0 +1,849 @@
+{
+ "productType": "Chillers",
+ "manufacturer": "Blue Star",
+ "productName": "LCA1-079V0321 - VFD Screw Air-cooled Chiller 78TR",
+ "capacityValue": 274.3,
+ "capacityUnit": "kW Cooling",
+ "serviceLifeYears": 25,
+ "productWeightKg": 3081.0,
+ "materials": [
+  {
+   "name": "ABS"
+  },
+  {
+   "name": "Aluminium"
+  },
+  {
+   "name": "Brass",
+   "percent": 0.0029016553067185975,
+   "recycledPercent": 0.11409395973154363
+  },
+  {
+   "name": "Cast iron",
+   "percent": 0.015871470301850047,
+   "recycledPercent": 0.25
+  },
+  {
+   "name": "Ceramic",
+   "percent": 0.0009737098344693282
+  },
+  {
+   "name": "Copper",
+   "percent": 0.2003765011359948,
+   "recycledPercent": 0.39669560710120516
+  },
+  {
+   "name": "Electronic component",
+   "percent": 0.02234988640051931
+  },
+  {
+   "name": "Expanded polystyrene"
+  },
+  {
+   "name": "Glass"
+  },
+  {
+   "name": "Insulation (general)"
+  },
+  {
+   "name": "Iron"
+  },
+  {
+   "name": "Lithium"
+  },
+  {
+   "name": "Plastics (general)",
+   "percent": 0.009087958455047063
+  },
+  {
+   "name": "Polyamide"
+  },
+  {
+   "name": "Polycarbonate"
+  },
+  {
+   "name": "Polyethylene"
+  },
+  {
+   "name": "Polyurethane foam",
+   "percent": 0.006815968841285297
+  },
+  {
+   "name": "Printed wiring board, mixed mounted"
+  },
+  {
+   "name": "PVC pipe"
+  },
+  {
+   "name": "PVC",
+   "percent": 0.004414151249594288
+  },
+  {
+   "name": "Rubber",
+   "percent": 0.014326517364492048
+  },
+  {
+   "name": "Silicon"
+  },
+  {
+   "name": "Stainless steel"
+  },
+  {
+   "name": "Steel (general or galvanised)",
+   "percent": 0.02207075624797144,
+   "recycledPercent": 0.2
+  },
+  {
+   "name": "Zinc"
+  },
+  {
+   "name": "Silver",
+   "percent": 0.0004543979227523531
+  },
+  {
+   "name": "Paint, Waterborne",
+   "percent": 0.0019474196689386564
+  },
+  {
+   "name": "Steel, Section",
+   "percent": 0.19581304771178187,
+   "recycledPercent": 0.35
+  },
+  {
+   "name": "Steel, finished cold-rolled coil",
+   "percent": 0.24612138915936385,
+   "recycledPercent": 0.33759066332586046
+  },
+  {
+   "name": "Steel, Engineering steel",
+   "percent": 0.1712625770853619,
+   "recycledPercent": 0.18951597619679336
+  },
+  {
+   "name": "Steel, Wire rod",
+   "percent": 0.03995456020772476,
+   "recycledPercent": 0.30649878147847276
+  },
+  {
+   "name": "Aluminium sheet, Worldwide",
+   "percent": 0.014540733528075299,
+   "recycledPercent": 0.30000000000000004
+  },
+  {
+   "name": "Aluminium cast, Worldwide",
+   "percent": 0.0038948393378773127,
+   "recycledPercent": 0.3
+  },
+  {
+   "name": "Insert other material here"
+  }
+ ],
+ "refrigerantType": "R134a",
+ "refrigerantChargeKg": 80.0,
+ "leakageScenario": "Package heat pump or chiller – where no refrigerant is managed on-site",
+ "replacements": [
+  {
+   "componentSlot": 29,
+   "rate": 1.1504377819050144
+  },
+  {
+   "componentSlot": 23,
+   "rate": 0.9028146574614977
+  },
+  {
+   "componentSlot": 5,
+   "rate": 0.14902164053388622
+  },
+  {
+   "componentSlot": 20,
+   "rate": 3.6375169913910286
+  },
+  {
+   "componentSlot": 6,
+   "rate": 0.07115887307580598
+  }
+ ],
+ "factoryCity": "Wada, Mahārāshtra, India",
+ "electricityRegion": "Electricity - Asia",
+ "electricityKwh": 27000.0,
+ "gasKwh": 962.0,
+ "gasFuelType": "Natural gas",
+ "numProducts": 8,
+ "totalTonnage": 24.648,
+ "productTonnage": 24.648,
+ "productInfo": {
+  "model": "LCA1-079V0321",
+  "productType": "Air-cooled chiller",
+  "series": "VFD Screw Air-cooled Chiller 78TR",
+  "manufacturer": "Blue Star",
+  "plant": {
+   "city": "Wada",
+   "state": "Maharashtra",
+   "country": "India"
+  },
+  "dataPeriod": "Apr 2024-Mar 2025",
+  "salesMarkets": "India",
+  "ratingStandard": "AHRI 550/590",
+  "coolingCapacityKw": 274.3,
+  "powerInputKw": 95.51,
+  "iplv": {
+   "value": 0.708,
+   "unit": "kW/TR"
+  },
+  "dimensionsMm": {
+   "length": 3067.0,
+   "width": 2266.0,
+   "height": 2870.0
+  },
+  "operatingWeightKg": 3081.0,
+  "bomMassKg": 2998.36,
+  "refrigerant": {
+   "type": "R134a",
+   "chargeKg": 80.0,
+   "circuits": 1,
+   "factoryCharged": true,
+   "annualLeakRate": 0.02
+  },
+  "oil": {
+   "type": "POE",
+   "chargeKg": 28.0
+  },
+  "compressor": {
+   "type": "Screw",
+   "construction": "Semi-hermetic",
+   "count": 1
+  },
+  "supply": {
+   "voltage": 415.0,
+   "hz": 50.0,
+   "phases": 3
+  },
+  "designLifeYears": 25,
+  "warrantyYears": null
+ },
+ "bom": [
+  {
+   "item": "BOM-001",
+   "component": "Base Frame / Main Skid",
+   "category": "Steel_Carbon",
+   "massKg": 603.3,
+   "recycledPct": 35.0,
+   "material": "Steel, Section",
+   "kgco2ePerKg": 1.61,
+   "why": "template: section bar rolling"
+  },
+  {
+   "item": "BOM-002",
+   "component": "Side and Top Panels (Casing)",
+   "category": "Steel_Carbon",
+   "massKg": 562.2,
+   "recycledPct": 35.0,
+   "material": "Steel, finished cold-rolled coil",
+   "kgco2ePerKg": 2.57,
+   "why": "template: sheet rolling"
+  },
+  {
+   "item": "BOM-003",
+   "component": "Fasteners - Bolts, Nuts, Washers",
+   "category": "Steel_Carbon",
+   "massKg": 107.1,
+   "recycledPct": 30.0,
+   "material": "Steel, Wire rod",
+   "kgco2ePerKg": 2.16,
+   "why": "template: wire drawing"
+  },
+  {
+   "item": "BOM-004a",
+   "component": "Anti-Vibration Mounts - 40% steel",
+   "category": "Rubber_Steel_Composite",
+   "massKg": 26.76,
+   "recycledPct": 0.0,
+   "material": "Steel, Engineering steel",
+   "kgco2ePerKg": 1.64,
+   "why": "template: metal working / hot rolled steel parts"
+  },
+  {
+   "item": "BOM-004b",
+   "component": "Anti-Vibration Mounts - 60% rubber",
+   "category": "Rubber_Steel_Composite",
+   "massKg": 40.14,
+   "recycledPct": 0.0,
+   "material": "Rubber",
+   "kgco2ePerKg": 2.85,
+   "why": "template: synthetic rubber; TM65 used because rubber is replaced 4x (engine rule)"
+  },
+  {
+   "item": "BOM-005",
+   "component": "Semi Hermetic Screw Compressor - Steel Body + Shaft",
+   "category": "Steel_Carbon",
+   "massKg": 500.0,
+   "recycledPct": 20.0,
+   "material": "Steel, Engineering steel",
+   "kgco2ePerKg": 1.64,
+   "why": "template: metal working / hot rolled steel parts"
+  },
+  {
+   "item": "BOM-006",
+   "component": "Compressor Motor Windings",
+   "category": "Copper",
+   "massKg": 68.0,
+   "recycledPct": 40.0,
+   "material": "Copper",
+   "kgco2ePerKg": 3.81,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-007",
+   "component": "Compressor Oil Charge - POE Lubricant",
+   "category": "Synthetic_Oil",
+   "massKg": 28.0,
+   "recycledPct": 0.0,
+   "material": "Plastics (general)",
+   "kgco2ePerKg": 3.31,
+   "why": "proxy for POE lubricant (no oil material in TM65 or ICE)"
+  },
+  {
+   "item": "BOM-008",
+   "component": "Discharge Muffler",
+   "category": "Steel_Carbon",
+   "massKg": 4.0,
+   "recycledPct": 25.0,
+   "material": "Steel, finished cold-rolled coil",
+   "kgco2ePerKg": 2.57,
+   "why": "template: sheet rolling"
+  },
+  {
+   "item": "BOM-009",
+   "component": "Shell - Pressure Vessel Body",
+   "category": "Steel_Carbon",
+   "massKg": 67.7,
+   "recycledPct": 25.0,
+   "material": "Steel, finished cold-rolled coil",
+   "kgco2ePerKg": 2.57,
+   "why": "template: sheet rolling"
+  },
+  {
+   "item": "BOM-010",
+   "component": "Copper Tubes - Evaporator",
+   "category": "Copper",
+   "massKg": 123.96,
+   "recycledPct": 40.0,
+   "material": "Copper",
+   "kgco2ePerKg": 3.81,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-011",
+   "component": "Water Boxes / End Covers",
+   "category": "Cast_Iron",
+   "massKg": 36.9,
+   "recycledPct": 25.0,
+   "material": "Cast iron",
+   "kgco2ePerKg": 1.52,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-012",
+   "component": "Tube Sheets",
+   "category": "Steel_Carbon",
+   "massKg": 18.4,
+   "recycledPct": 25.0,
+   "material": "Steel, finished cold-rolled coil",
+   "kgco2ePerKg": 2.57,
+   "why": "template: sheet rolling"
+  },
+  {
+   "item": "BOM-013",
+   "component": "Shell Insulation",
+   "category": "Foam_Insulation",
+   "massKg": 15.0,
+   "recycledPct": 0.0,
+   "material": "Polyurethane foam",
+   "kgco2ePerKg": 4.55,
+   "why": "template: flexible PU foam (TM65 value averages rigid+flexible; ICE V5.0 only has rigid board)"
+  },
+  {
+   "item": "BOM-014",
+   "component": "Victaulic Couplings - Water Connections",
+   "category": "Ductile_Iron (cast iron proxy)",
+   "massKg": 12.0,
+   "recycledPct": 25.0,
+   "material": "Cast iron",
+   "kgco2ePerKg": 1.52,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-015",
+   "component": "Aluminium Fins",
+   "category": "Aluminium",
+   "massKg": 44.8,
+   "recycledPct": 30.0,
+   "material": "Aluminium sheet, Worldwide",
+   "kgco2ePerKg": 12.95589499130555,
+   "why": "template: wrought alloy, sheet rolling for fin stock"
+  },
+  {
+   "item": "BOM-016",
+   "component": "Copper Hairpin Tubes - Condenser Coil",
+   "category": "Copper",
+   "massKg": 270.0,
+   "recycledPct": 40.0,
+   "material": "Copper",
+   "kgco2ePerKg": 3.81,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-017",
+   "component": "Copper Headers and Manifolds",
+   "category": "Copper",
+   "massKg": 68.0,
+   "recycledPct": 40.0,
+   "material": "Copper",
+   "kgco2ePerKg": 3.81,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-018",
+   "component": "Coil Frame and Casing",
+   "category": "Steel_Carbon",
+   "massKg": 67.0,
+   "recycledPct": 35.0,
+   "material": "Steel, finished cold-rolled coil",
+   "kgco2ePerKg": 2.57,
+   "why": "template: sheet rolling"
+  },
+  {
+   "item": "BOM-019",
+   "component": "Fan Blade / Propeller",
+   "category": "Aluminium",
+   "massKg": 12.0,
+   "recycledPct": 30.0,
+   "material": "Aluminium cast, Worldwide",
+   "kgco2ePerKg": 13.186894991305548,
+   "why": "template: cast alloy"
+  },
+  {
+   "item": "BOM-020",
+   "component": "Fan Motor - Complete Unit",
+   "category": "Mixed_Motor",
+   "massKg": 68.0,
+   "recycledPct": 20.0,
+   "material": "Steel (general or galvanised)",
+   "kgco2ePerKg": 2.97,
+   "why": "sheet steel, but replaced 2x in B3; Basic mode allows only TM65 on replacement lines 2-5"
+  },
+  {
+   "item": "BOM-021",
+   "component": "Fan Motor - Copper Windings",
+   "category": "Copper",
+   "massKg": 12.0,
+   "recycledPct": 40.0,
+   "material": "Copper",
+   "kgco2ePerKg": 3.81,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-022",
+   "component": "Fan Guard / Safety Grille",
+   "category": "Steel_Carbon",
+   "massKg": 16.0,
+   "recycledPct": 35.0,
+   "material": "Steel, Wire rod",
+   "kgco2ePerKg": 2.16,
+   "why": "template: wire drawing"
+  },
+  {
+   "item": "BOM-024a",
+   "component": "Electronic Expansion Valve (EXV) - 80% brass",
+   "category": "Copper_Brass_Electronics",
+   "massKg": 1.6,
+   "recycledPct": 0.0,
+   "material": "Brass",
+   "kgco2ePerKg": 4.8,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-024b",
+   "component": "Electronic Expansion Valve (EXV) - 20% electronics",
+   "category": "Copper_Brass_Electronics",
+   "massKg": 0.4,
+   "recycledPct": 0.0,
+   "material": "Electronic component",
+   "kgco2ePerKg": 49.0,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-025",
+   "component": "Liquid Line Ball Valve",
+   "category": "Brass",
+   "massKg": 3.0,
+   "recycledPct": 30.0,
+   "material": "Brass",
+   "kgco2ePerKg": 4.8,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-026",
+   "component": "Oil Line Ball Valve",
+   "category": "Brass",
+   "massKg": 0.4,
+   "recycledPct": 30.0,
+   "material": "Brass",
+   "kgco2ePerKg": 4.8,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-027",
+   "component": "Filter Dryer - Shell",
+   "category": "Steel_Carbon",
+   "massKg": 4.0,
+   "recycledPct": 25.0,
+   "material": "Steel, finished cold-rolled coil",
+   "kgco2ePerKg": 2.57,
+   "why": "template: sheet rolling"
+  },
+  {
+   "item": "BOM-028",
+   "component": "Filter Dryer - Desiccant Cores",
+   "category": "Zeolite (molecular sieve)",
+   "massKg": 3.0,
+   "recycledPct": 0.0,
+   "material": "Ceramic",
+   "kgco2ePerKg": 0.7,
+   "why": "proxy for zeolite desiccant"
+  },
+  {
+   "item": "BOM-029a",
+   "component": "Solenoid Valve EVR6 - 80% brass",
+   "category": "Brass_Electronics",
+   "massKg": 0.24,
+   "recycledPct": 0.0,
+   "material": "Brass",
+   "kgco2ePerKg": 4.8,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-029b",
+   "component": "Solenoid Valve EVR6 - 20% electronics",
+   "category": "Brass_Electronics",
+   "massKg": 0.06,
+   "recycledPct": 0.0,
+   "material": "Electronic component",
+   "kgco2ePerKg": 49.0,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-030a",
+   "component": "Solenoid Valve EVR15 - 80% brass",
+   "category": "Brass_Electronics",
+   "massKg": 0.64,
+   "recycledPct": 0.0,
+   "material": "Brass",
+   "kgco2ePerKg": 4.8,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-030b",
+   "component": "Solenoid Valve EVR15 - 20% electronics",
+   "category": "Brass_Electronics",
+   "massKg": 0.16,
+   "recycledPct": 0.0,
+   "material": "Electronic component",
+   "kgco2ePerKg": 49.0,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-031a",
+   "component": "Solenoid Valve EVR20 - 80% brass",
+   "category": "Brass_Electronics",
+   "massKg": 0.96,
+   "recycledPct": 0.0,
+   "material": "Brass",
+   "kgco2ePerKg": 4.8,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-031b",
+   "component": "Solenoid Valve EVR20 - 20% electronics",
+   "category": "Brass_Electronics",
+   "massKg": 0.24,
+   "recycledPct": 0.0,
+   "material": "Electronic component",
+   "kgco2ePerKg": 49.0,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-032a",
+   "component": "Pressure Relief Valve - 300 PSIG - 70% brass",
+   "category": "Brass_Steel",
+   "massKg": 1.05,
+   "recycledPct": 0.0,
+   "material": "Brass",
+   "kgco2ePerKg": 4.8,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-032b",
+   "component": "Pressure Relief Valve - 300 PSIG - 30% steel",
+   "category": "Brass_Steel",
+   "massKg": 0.45,
+   "recycledPct": 0.0,
+   "material": "Steel, Engineering steel",
+   "kgco2ePerKg": 1.64,
+   "why": "template: metal working / hot rolled steel parts"
+  },
+  {
+   "item": "BOM-033a",
+   "component": "Pressure Relief Valve - 200 PSIG - 70% brass",
+   "category": "Brass_Steel",
+   "massKg": 1.05,
+   "recycledPct": 0.0,
+   "material": "Brass",
+   "kgco2ePerKg": 4.8,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-033b",
+   "component": "Pressure Relief Valve - 200 PSIG - 30% steel",
+   "category": "Brass_Steel",
+   "massKg": 0.45,
+   "recycledPct": 0.0,
+   "material": "Steel, Engineering steel",
+   "kgco2ePerKg": 1.64,
+   "why": "template: metal working / hot rolled steel parts"
+  },
+  {
+   "item": "BOM-034",
+   "component": "Refrigerant Pipe Set - Suction, Discharge, Liquid Lines",
+   "category": "Copper",
+   "massKg": 55.0,
+   "recycledPct": 40.0,
+   "material": "Copper",
+   "kgco2ePerKg": 3.81,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-035",
+   "component": "Suction Line Insulation",
+   "category": "Foam_Insulation",
+   "massKg": 6.0,
+   "recycledPct": 0.0,
+   "material": "Polyurethane foam",
+   "kgco2ePerKg": 4.55,
+   "why": "template: flexible PU foam (TM65 value averages rigid+flexible; ICE V5.0 only has rigid board)"
+  },
+  {
+   "item": "BOM-036",
+   "component": "VFD Drive Unit - Complete",
+   "category": "Electronics_Mixed",
+   "massKg": 64.2,
+   "recycledPct": 0.0,
+   "material": "Electronic component",
+   "kgco2ePerKg": 49.0,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-037",
+   "component": "Control Panel Enclosure",
+   "category": "Steel_Carbon",
+   "massKg": 35.0,
+   "recycledPct": 35.0,
+   "material": "Steel, finished cold-rolled coil",
+   "kgco2ePerKg": 2.57,
+   "why": "template: sheet rolling"
+  },
+  {
+   "item": "BOM-038",
+   "component": "Main Controller - MCS-MAGNUM 12V",
+   "category": "Electronics_PCB",
+   "massKg": 1.5,
+   "recycledPct": 0.0,
+   "material": "Electronic component",
+   "kgco2ePerKg": 49.0,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-039",
+   "component": "Modbus I/O Module - MCS-MODBUS-IO 12V",
+   "category": "Electronics_PCB",
+   "massKg": 0.5,
+   "recycledPct": 0.0,
+   "material": "Electronic component",
+   "kgco2ePerKg": 49.0,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-040",
+   "component": "Pressure Transducer TI-500-20",
+   "category": "Electronics_Steel",
+   "massKg": 0.2,
+   "recycledPct": 0.0,
+   "material": "Electronic component",
+   "kgco2ePerKg": 49.0,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-041",
+   "component": "Pressure Transducer TI-200-20",
+   "category": "Electronics_Steel",
+   "massKg": 0.2,
+   "recycledPct": 0.0,
+   "material": "Electronic component",
+   "kgco2ePerKg": 49.0,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-042",
+   "component": "Temperature Sensor - MCS Type",
+   "category": "Electronics_Steel",
+   "massKg": 0.1,
+   "recycledPct": 0.0,
+   "material": "Electronic component",
+   "kgco2ePerKg": 49.0,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-043",
+   "component": "Oil Level Switch",
+   "category": "Electronics_Steel",
+   "massKg": 0.3,
+   "recycledPct": 0.0,
+   "material": "Electronic component",
+   "kgco2ePerKg": 49.0,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-044a",
+   "component": "Power Wiring - Mains Cables 415V 159A FLA - 60% copper",
+   "category": "Copper_PVC",
+   "massKg": 16.8,
+   "recycledPct": 30.0,
+   "material": "Copper",
+   "kgco2ePerKg": 3.81,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-044b",
+   "component": "Power Wiring - Mains Cables 415V 159A FLA - 40% pvc",
+   "category": "Copper_PVC",
+   "massKg": 11.2,
+   "recycledPct": 0.0,
+   "material": "PVC",
+   "kgco2ePerKg": 3.1,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-045a",
+   "component": "Control Wiring - Low Voltage Signal Cables - 60% copper",
+   "category": "Copper_PVC",
+   "massKg": 3.6,
+   "recycledPct": 30.0,
+   "material": "Copper",
+   "kgco2ePerKg": 3.81,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-045b",
+   "component": "Control Wiring - Low Voltage Signal Cables - 40% pvc",
+   "category": "Copper_PVC",
+   "massKg": 2.4,
+   "recycledPct": 0.0,
+   "material": "PVC",
+   "kgco2ePerKg": 3.1,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-046",
+   "component": "7-Inch Touch Screen Display",
+   "category": "Electronics_Mixed",
+   "massKg": 1.0,
+   "recycledPct": 0.0,
+   "material": "Electronic component",
+   "kgco2ePerKg": 49.0,
+   "why": "TM65 Table 2.1 material"
+  },
+  {
+   "item": "BOM-047",
+   "component": "Brazing Filler Material - Silver Solder",
+   "category": "Silver_Alloy",
+   "massKg": 1.4,
+   "recycledPct": 0.0,
+   "material": "Silver",
+   "kgco2ePerKg": 6.31,
+   "why": "template: silver (ICE legacy value; V5.0 deleted it)"
+  },
+  {
+   "item": "BOM-048",
+   "component": "Gaskets and O-Rings",
+   "category": "Rubber_EPDM or PTFE",
+   "massKg": 4.0,
+   "recycledPct": 0.0,
+   "material": "Rubber",
+   "kgco2ePerKg": 2.85,
+   "why": "template: synthetic rubber; TM65 used because rubber is replaced 4x (engine rule)"
+  },
+  {
+   "item": "BOM-049",
+   "component": "Powder Coat Paint - All Steel Surfaces",
+   "category": "Polyester_Resin",
+   "massKg": 6.0,
+   "recycledPct": 0.0,
+   "material": "Paint, Waterborne",
+   "kgco2ePerKg": 2.1518303071422826,
+   "why": "ICE V5.0 paint; template uses alkyd paint as proxy for polyester powder"
+  }
+ ],
+ "a3": {
+  "period": "Jan-Dec 2023",
+  "unitsPerYear": 8,
+  "electricityKwhPerYear": {
+   "Factory grid electricity - overall building": 20000.0,
+   "Compressed air system": 3200.0,
+   "Brazing operations": 200.0,
+   "Metal cutting and pressing operations": 2400.0,
+   "Factory run test - chiller operating under load": 400.0,
+   "Assembly operations - lighting, tools, test equipment": 800.0
+  },
+  "naturalGasKwhPerYear": {
+   "Factory natural gas - space heating and process heat": 920.0,
+   "Powder coating - curing oven energy": 42.0
+  },
+  "perUnit": {
+   "electricityKwh": 3375.0,
+   "gasKwh": 120.25
+  }
+ },
+ "replacementBasis": [
+  {
+   "material": "Steel, Engineering steel",
+   "replacedKg": 607.04,
+   "slotKg": 527.66,
+   "source": "B3-001 compressor steel 500 + B2-005 mount steel 107.04"
+  },
+  {
+   "material": "Steel (general or galvanised)",
+   "replacedKg": 136.0,
+   "slotKg": 150.64,
+   "source": "B3-002 fan motor steel 2 x 68 (slot also holds the TM65 steel balance)"
+  },
+  {
+   "material": "Copper",
+   "replacedKg": 92.0,
+   "slotKg": 617.36,
+   "source": "B3-001 windings 68 + B3-002 windings 2 x 12"
+  },
+  {
+   "material": "Rubber",
+   "replacedKg": 160.56,
+   "slotKg": 44.14,
+   "source": "B2-005 mount rubber 4 x 40.14"
+  },
+  {
+   "material": "Electronic component",
+   "replacedKg": 4.9,
+   "slotKg": 68.86,
+   "source": "B3-003 PCB 3 x 1.5 + B3-004 EXV electronics 0.4"
+  }
+ ],
+ "_notes": "Built from Data_Templates (6).xlsx. Weight 3081 kg = PI-304 operating weight (with refrigerant and oil, no packaging). BOM-001..049 = 2998.36 kg (BOM-023 refrigerant 80 kg and BOM-050 nitrogen 0 kg are not materials). Shares = BOM kg / 3081 = 97.32%. TM65 rule: 'Steel (general or galvanised)' takes the balance to 100% = 82.64 kg (80 kg charge + 2.64 kg unallocated). Composite splits are the template's own (mounts 40/60 steel/rubber; EXV and solenoids 80/20 brass/electronics; relief valves 70/30 brass/steel); cables 60/40 copper/PVC is OUR assumption (the template uses one composite cable dataset). Replacements (max 5): compressor steel+mounts steel, fan-motor steel, copper windings, mount rubber, PCBs+EXV electronics. Not loaded (no 6th line, and lines 2-5 must be TM65 in Basic mode): B3-001 oil 28 kg, B3-004 EXV brass 1.6 kg, B3-005 silver 0.2 kg. A3: 8 units/yr, electricity 27000 kWh/yr (3375/unit), gas 962 kWh/yr (120.25/unit); factory makes only this chiller, so total = product tonnage = 8 x 3.081 t. Template differences the app cannot hold: A3 period Jan-Dec 2023 vs PI-108 Apr 2024-Mar 2025; grid India Western (1.5433) vs app 'Electricity - Asia'; R134a GWP 1526 (EF 3.1) vs app 1430; EOL recovery 90% (B4/C1) vs app scenario 99%. Manufacturer shown as 'Blue Star' (template PI-104 holds a placeholder)."
+}

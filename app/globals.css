@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-sunken: var(--sunken);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-on-accent: var(--on-accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-text: var(--accent-text);
+  --color-lime: var(--lime);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-ok: var(--ok);
+  --color-ok-soft: var(--ok-soft);
+  --color-p1: var(--p1);
+  --color-p2: var(--p2);
+  --color-p3: var(--p3);
+  --color-p4: var(--p4);
+  --shadow-soft: var(--sh-soft);
+  --shadow-lift: var(--sh-lift);
+  /* Apple type system. Apple devices: real San Francisco (SF Pro Text / Display switch automatically by size).
+     Other devices: Inter (self-hosted, open licence), the closest match to SF Pro. */
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "SF Pro", var(--font-inter), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Monaco, "Cascadia Code", "Roboto Mono", monospace;
+
+  /* apple.com letter-spacing per text size (SF Text below 20px, SF Display from 20px) */
+  --text-xs--letter-spacing: -0.01em;
+  --text-sm--letter-spacing: -0.016em;
+  --text-base--letter-spacing: -0.02em;
+  --text-lg--letter-spacing: -0.022em;
+  --text-xl--letter-spacing: 0.011em;
+  --text-2xl--letter-spacing: 0.009em;
+  --text-3xl--letter-spacing: 0.005em;
+  --text-4xl--letter-spacing: 0.002em;
+  --text-5xl--letter-spacing: -0.003em;
+  --text-6xl--letter-spacing: -0.007em;
+  --text-7xl--letter-spacing: -0.012em;
+  /* headline tracking as on apple.com (headlines are near 0, not tight) */
+  --tracking-tight: -0.003em;
+}
+
+:root {
+  color-scheme: light;
+  --bg: #f7f6f2;
+  --surface: #ffffff;
+  --sunken: #f1efe9;
+  --ink: #111a15;
+  --ink-2: #4b544e;
+  --muted: #858b85;
+  --line: #e7e4dc;
+  --line-strong: #d2cec3;
+  --accent: #1c5a38;
+  --accent-hover: #15472c;
+  --on-accent: #ffffff;
+  --accent-soft: #e9f2eb;
+  --accent-text: #1c5a38;
+  --lime: #c8f26e;
+  --danger: #b42318;
+  --danger-soft: #fdeeec;
+  --warn: #9a5b06;
+  --warn-soft: #fcf3e3;
+  --ok: #1a7a44;
+  --ok-soft: #e7f5ec;
+  /* life cycle phases: product, construction, use, end of life (validated categorical order) */
+  --p1: #2a78d6;
+  --p2: #eb6834;
+  --p3: #1baf7a;
+  --p4: #eda100;
+  --sh-soft: 0 1px 2px rgb(17 26 21 / 0.04), 0 4px 18px -6px rgb(17 26 21 / 0.08);
+  --sh-lift: 0 2px 4px rgb(17 26 21 / 0.04), 0 24px 48px -16px rgb(17 26 21 / 0.22);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  overflow-x: clip;
+}
+
+button,
+a,
+[role="option"],
+[role="radio"] {
+  touch-action: manipulation;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+body {
+  overflow-x: clip;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  line-height: 1.47059;
+  letter-spacing: -0.016em;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--lime) 70%, transparent);
+  color: #0c1a10;
+}
+
+.grid-paper {
+  background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, black 30%, transparent 75%);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+}
+@keyframes grow {
+  from {
+    transform: scaleX(0);
+  }
+}
+@keyframes pulse-dot {
+  50% {
+    opacity: 0.25;
+  }
+}
+
+.rise {
+  animation: rise 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.fade {
+  animation: fade 0.2s ease-out both;
+}
+.pop {
+  animation: pop 0.28s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+.grow {
+  transform-origin: left;
+  animation: grow 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+  :root {
+    color-scheme: light;
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --sunken: #f4f3ef;
+    --ink: #111a15;
+    --ink-2: #4b544e;
+    --muted: #6f756f;
+    --line: #e2dfd7;
+    --line-strong: #cfcbc0;
+    --accent-text: #1c5a38;
+    --p1: #2a78d6;
+    --p2: #eb6834;
+    --p3: #1baf7a;
+    --p4: #eda100;
+    --sh-soft: none;
+    --sh-lift: none;
+  }
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-avoid {
+    break-inside: avoid;
+  }
+  body {
+    min-height: 0 !important;
+    display: block !important;
+  }
+  .rise,
+  .fade,
+  .pop {
+    animation: none !important;
+  }
+  .shadow-soft,
+  .shadow-lift {
+    box-shadow: none !important;
+  }
+}
