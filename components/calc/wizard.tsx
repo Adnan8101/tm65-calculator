@@ -5,7 +5,7 @@ import type { Draft, Errs, Level, Ref, Step } from "@/lib/types";
 import { blank, fromSample, toInputs } from "@/lib/api";
 import { calculate, getBls, getExample, getReference } from "@/app/actions";
 import { checkStep, share } from "@/lib/check";
-import { Rounding, useDp } from "@/lib/dp";
+import { useDp } from "@/lib/dp";
 import { Button, Callout, Card, Modal, Spinner } from "../ui";
 import { BoxArt, FactoryArt, LayersArt } from "../art";
 import { ChecklistArt, OfflineArt, RefrigerantArt } from "../art2";
@@ -293,9 +293,8 @@ export default function Wizard() {
             </ol>
           </nav>
 
-          <Card className="mt-6 hidden space-y-3 p-4 lg:block">
-            <Rounding />
-            <div className="border-t border-line pt-3">
+          <Card className="mt-6 hidden p-4 lg:block">
+            <div>
               <button type="button" onClick={() => loadData("bls")} className="flex w-full items-center gap-2.5 rounded-lg py-1 text-[13px] text-ink-2 transition-colors hover:text-ink">
                 <Sparkle className="h-4 w-4 text-accent-text" /> Load BLS data
               </button>
@@ -338,7 +337,6 @@ export default function Wizard() {
 
             <div className="lg:hidden">
               <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2">
-                <Rounding />
                 <button type="button" onClick={() => loadData("bls")} className="flex min-h-9 items-center gap-1.5 text-[13px] text-ink-2 hover:text-ink">
                   <Sparkle className="h-4 w-4 text-accent-text" /> Load BLS data
                 </button>

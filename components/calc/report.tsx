@@ -102,6 +102,7 @@ export default function ReportView({ res, err, d, level, onBack, onNew, extra }:
   const mats = [...(r.materials as MatRow[])].sort((a, b) => (b.embodied ?? 0) - (a.embodied ?? 0));
   const matTop = Math.max(...mats.map((m) => m.embodied ?? 0), 1);
   const kind = mid ? "mid-level" : "basic";
+  const capacity = String(c.capacity ?? "").replace(/^-?\d+(\.\d+)?/, (n) => f(n));
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:py-12 print:max-w-none print:p-0">
@@ -117,7 +118,7 @@ export default function ReportView({ res, err, d, level, onBack, onNew, extra }:
           </div>
           <h1 className="mt-3 text-3xl font-semibold tracking-tight text-ink sm:text-4xl print:mt-1 print:text-2xl">{d.name}</h1>
           <p className="mt-2 text-[15px] text-ink-2 print:mt-0.5 print:text-xs">
-            {d.maker} · {c.productType} · {c.capacity}
+            {d.maker} · {c.productType} · {capacity}
           </p>
         </header>
 
@@ -224,7 +225,7 @@ export default function ReportView({ res, err, d, level, onBack, onNew, extra }:
             <dl className="mt-4">
               <Item k="Manufacturer" v={d.maker} />
               <Item k="Type" v={c.productType} />
-              <Item k="Capacity" v={c.capacity} />
+              <Item k="Capacity" v={capacity} />
               <Item k="Weight" v={`${f(c.productWeightKg)} kg`} />
               <Item k="Weight covered by materials" v={p(c.materialShare)} />
               <Item k="Service life" v={`${c.serviceLifeYears} years`} />

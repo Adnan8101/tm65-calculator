@@ -37,13 +37,15 @@ const phases = [
   { name: "End of life", color: "var(--p4)", stages: [["C1", "Refrigerant leakage when decommissioning"], ["C2", "Transport to waste processing"], ["C3", "Waste processing"], ["C4", "Disposal"]] },
 ];
 
-// Figures from the calculator's built-in sample product (mid-level method).
+// Figures from the built-in BLS data (Blue Star 78 TR chiller, mid-level method), as calculated by the engine.
 const preview = [
-  ["Materials and manufacturing", "A1–A3", 13598, "var(--p1)"],
-  ["Transport to site", "A4", 388, "var(--p2)"],
-  ["Refrigerant leakage in use and repairs", "B1, B3", 1498, "var(--p3)"],
-  ["End of life", "C1–C4", 993, "var(--p4)"],
+  ["Materials and manufacturing", "A1–A3", 32926.0849, "var(--p1)"],
+  ["Transport to site", "A4", 866.7469, "var(--p2)"],
+  ["Refrigerant leakage in use and repairs", "B1, B3", 67338.8545, "var(--p3)"],
+  ["End of life", "C1–C4", 4921.2026, "var(--p4)"],
 ] as const;
+const previewTotal = 106052.8889;
+const dp2 = (v: number) => v.toLocaleString("en-GB", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
 function Preview() {
   return (
@@ -51,18 +53,19 @@ function Preview() {
       <div className="absolute -inset-6 -z-10 rounded-[2rem] bg-gradient-to-br from-lime/30 via-transparent to-p1/10 blur-2xl" />
       <div className="rounded-2xl border border-line bg-surface p-5 shadow-lift sm:p-7">
         <div className="flex items-center justify-between">
-          <span className="rounded-full bg-accent-soft px-2 py-0.5 text-xs font-medium text-accent-text">Example · mid-level</span>
+          <span className="rounded-full bg-accent-soft px-2 py-0.5 text-xs font-medium text-accent-text">BLS data · mid-level</span>
           <span className="flex gap-1">
             {[0, 1, 2].map((i) => (
               <span key={i} className="h-2 w-2 rounded-full bg-line-strong" />
             ))}
           </span>
         </div>
-        <p className="mt-5 text-sm font-medium text-ink">Heat interface unit</p>
-        <p className="text-xs text-muted">1,350 kW cooling · 1,508 kg · 11-year life</p>
+        <p className="mt-5 text-sm font-medium text-ink">Blue Star air-cooled screw chiller</p>
+        <p className="text-xs text-muted">274.30 kW cooling (78 TR) · 3,081.00 kg · 25-year life</p>
         <p className="mt-5 text-xs text-muted">Total embodied carbon</p>
-        <p className="mt-1 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
-          16,478<span className="ml-2 text-base font-normal text-muted">kgCO₂e</span>
+        <p className="mt-1 flex flex-wrap items-baseline gap-x-2 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+          {dp2(previewTotal)}
+          <span className="text-base font-normal text-muted">kgCO₂e</span>
         </p>
         <div className="mt-6 flex justify-center pb-10">
           <Pie size={190} label="Share of total by life cycle phase" slices={preview.map(([name, codes, value, color]) => ({ name, codes, value, color }))} />
@@ -74,7 +77,7 @@ function Preview() {
               <span className="min-w-0 flex-1 text-ink-2">
                 {n} <span className="font-mono text-xs text-muted">{codes}</span>
               </span>
-              <span className="font-mono tabular-nums text-ink">{v.toLocaleString("en-GB")}</span>
+              <span className="font-mono tabular-nums text-ink">{dp2(v)}</span>
             </li>
           ))}
         </ul>
@@ -103,14 +106,6 @@ export default function Home() {
               Start a calculation <Right />
             </LinkButton>
           </div>
-          <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[13px] text-ink-2">
-            {["No account needed", "Drafts save automatically", "Print-ready reports"].map((t) => (
-              <li key={t} className="flex items-center gap-1.5">
-                <Check className="h-4 w-4 text-accent-text" />
-                {t}
-              </li>
-            ))}
-          </ul>
         </div>
         <div className="rise relative min-w-0" style={{ animationDelay: "120ms" }}>
           <FactoryArt className="pointer-events-none absolute -right-4 -top-24 hidden h-36 w-48 sm:block lg:-right-10 lg:-top-28" />

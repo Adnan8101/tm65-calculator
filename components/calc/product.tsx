@@ -4,6 +4,7 @@ import { Combo, Field, Input, Section, Select, opts } from "../ui";
 import { Box, Sliders } from "../icons";
 import { TR, TR_TO_KW } from "@/lib/api";
 import { toNum } from "@/lib/check";
+import { fmt } from "@/lib/dp";
 
 export default function ProductStep({ d, up, errs, refs }: StepProps) {
   return (
@@ -27,7 +28,7 @@ export default function ProductStep({ d, up, errs, refs }: StepProps) {
 
       <Section title="Specification" text="Weight and service life drive most of the result." icon={<Sliders />}>
         <div className="grid gap-5 sm:grid-cols-2">
-          <Field label="Capacity or size" id="cap" error={errs.cap || errs.unit} hint={d.unit === TR ? (toNum(d.cap) ? `= ${(Math.round(toNum(d.cap)! * TR_TO_KW * 100) / 100).toLocaleString("en-GB")} kW Cooling (1 TR = ${TR_TO_KW} kW). The report uses kW.` : `Enter tons of refrigeration. It is converted to kW automatically (1 TR = ${TR_TO_KW} kW).`) : "For heating or cooling equipment, say whether the capacity is for heating or cooling. Or choose TR Cooling to enter tons of refrigeration."} className="sm:col-span-2">
+          <Field label="Capacity or size" id="cap" error={errs.cap || errs.unit} hint={d.unit === TR ? (toNum(d.cap) ? `= ${fmt(Math.round(toNum(d.cap)! * TR_TO_KW * 100) / 100)} kW Cooling (1 TR = ${TR_TO_KW} kW). The report uses kW.` : `Enter tons of refrigeration. It is converted to kW automatically (1 TR = ${TR_TO_KW} kW).`) : "For heating or cooling equipment, say whether the capacity is for heating or cooling. Or choose TR Cooling to enter tons of refrigeration."} className="sm:col-span-2">
             <div className="grid grid-cols-[minmax(0,1fr)_150px] gap-2">
               <Input id="cap" inputMode="decimal" value={d.cap} invalid={!!errs.cap} placeholder="0" onChange={(e) => up({ cap: e.target.value })} />
               <Select value={d.unit} invalid={!!errs.unit} placeholder="Unit" aria-label="Unit" list={[...refs.units, TR]} onChange={(e) => up({ unit: e.target.value })} />

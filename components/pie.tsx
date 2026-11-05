@@ -14,7 +14,7 @@ function path(a0: number, a1: number) {
 }
 
 /** Pie chart with hover/focus highlight. `unit` and `fmt` format the tooltip text. */
-export default function Pie({ slices, size = 200, label, fmt = (v: number) => v.toLocaleString("en-GB", { maximumFractionDigits: 0 }), unit = "kgCO₂e", className = "" }: { slices: PieSlice[]; size?: number; label: string; fmt?: (v: number) => string; unit?: string; className?: string }) {
+export default function Pie({ slices, size = 200, label, fmt = (v: number) => v.toLocaleString("en-GB", { minimumFractionDigits: 2, maximumFractionDigits: 2 }), unit = "kgCO₂e", className = "" }: { slices: PieSlice[]; size?: number; label: string; fmt?: (v: number) => string; unit?: string; className?: string }) {
   const [hov, setHov] = useState<number | null>(null);
   const live = slices.map((s, i) => ({ ...s, i })).filter((s) => s.value > 0);
   const total = live.reduce((a, s) => a + s.value, 0) || 1;
@@ -32,11 +32,11 @@ export default function Pie({ slices, size = 200, label, fmt = (v: number) => v.
           const mid = (s.a0 + s.a1) / 2;
           const [lx, ly] = polar(mid, R * 0.64);
           return (
-            <g key={s.name} tabIndex={0} onMouseEnter={() => setHov(s.i)} onMouseLeave={() => setHov(null)} onFocus={() => setHov(s.i)} onBlur={() => setHov(null)} className="outline-none" aria-label={`${s.name}: ${fmt(s.value)} ${unit}, ${(s.sh * 100).toFixed(1)}%`} style={{ opacity: hov === null || hov === s.i ? 1 : 0.55, transition: "opacity .15s" }}>
+            <g key={s.name} tabIndex={0} onMouseEnter={() => setHov(s.i)} onMouseLeave={() => setHov(null)} onFocus={() => setHov(s.i)} onBlur={() => setHov(null)} className="outline-none" aria-label={`${s.name}: ${fmt(s.value)} ${unit}, ${(s.sh * 100).toFixed(2)}%`} style={{ opacity: hov === null || hov === s.i ? 1 : 0.55, transition: "opacity .15s" }}>
               <path d={path(s.a0, s.a1)} fill={s.color} stroke="var(--surface, #fff)" strokeWidth={arcs.length > 1 ? 2 : 0} strokeLinejoin="round" />
               {s.sh >= 0.07 && (
-                <text x={lx} y={ly} textAnchor="middle" dominantBaseline="central" fontSize="12" fontWeight="600" fill="#fff" className="pointer-events-none" style={s.color.includes("p4") ? { fill: "#0b0b0b" } : undefined}>
-                  {Math.round(s.sh * 100)}%
+                <text x={lx} y={ly} textAnchor="middle" dominantBaseline="central" fontSize="11" fontWeight="600" fill="#fff" className="pointer-events-none" style={s.color.includes("p4") ? { fill: "#0b0b0b" } : undefined}>
+                  {(s.sh * 100).toFixed(2)}%
                 </text>
               )}
             </g>
@@ -49,7 +49,7 @@ export default function Pie({ slices, size = 200, label, fmt = (v: number) => v.
             {h.name} {h.codes && <span className="font-mono font-normal text-muted">{h.codes}</span>}
           </span>
           <span className="mt-0.5 block text-ink-2">
-            {fmt(h.value)} {unit} · {(h.sh * 100).toFixed(1)}%
+            {fmt(h.value)} {unit} · {(h.sh * 100).toFixed(2)}%
           </span>
         </span>
       )}
