@@ -37,10 +37,10 @@ export const blsData = () => readData('bls.json');
 export type CalcOutcome = { results: unknown } | { errors: string[] };
 
 export function run(inputs: unknown, mode: string = 'both'): CalcOutcome {
-  if (!inputs || typeof inputs !== 'object') return { errors: ['inputs required'] };
-  const errors = validate(inputs, mode);
-  if (errors.length) return { errors: errors.map((e) => e.message) };
+  if (!inputs || typeof inputs !== 'object' || Array.isArray(inputs)) return { errors: ['inputs required'] };
   try {
+    const errors = validate(inputs, mode);
+    if (errors.length) return { errors: errors.map((e) => e.message) };
     return { results: view(calculate(inputs, { mode })) };
   } catch (e) {
     if (e instanceof XlErr) return { errors: ['The calculation could not be completed for these inputs.'] };
