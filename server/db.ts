@@ -7,7 +7,10 @@ const file = process.env.TM65_DB || path.join(process.cwd(), 'data', 'tm65.db');
 // Read-only: the app never writes, and serverless filesystems (e.g. Vercel) are read-only.
 export const db = new DatabaseSync(file, { readOnly: true });
 
-const all = (sql: string): any[] => db.prepare(sql).all() as any[];
+// node:sqlite returns null-prototype rows; React can't serialize those to the client
+// (server actions fail with an opaque digest error), so always copy into plain objects.
+const plain = (r: any) => (r ? { ...r } : r);
+const all = (sql: string): any[] => (db.prepare(sql).all() as any[]).map(plain);
 
 const firstBy = (rows: any[], f: (r: any) => string) => {
   const m = new Map<string, any>();
@@ -50,7 +53,7 @@ export const getRef = () => (memo ||= load());
 
 export function findCity(label: any): any {
   const sql = 'SELECT * FROM cities WHERE label = ? COLLATE NOCASE ORDER BY source_row LIMIT 1';
-  return db.prepare(sql).get(String(label ?? '').trim()) || null;
+  return plain(db.prepare(sql).get(String(label ?? '').trim())) || null;
 }
 
 export function searchCities(q: string, limit = 30): any[] {
@@ -60,5 +63,5 @@ export function searchCities(q: string, limit = 30): any[] {
   const sql =
     'SELECT label, lat, lng FROM cities WHERE is_primary=1 AND (label LIKE ? OR city_ascii LIKE ?) ' +
     'ORDER BY (city_ascii LIKE ? OR city LIKE ?) DESC, population DESC LIMIT ?';
-  return db.prepare(sql).all(like, like, prefix, prefix, limit) as any[];
+  return (db.prepare(sql).all(like, like, prefix, prefix, limit) as any[]).map((r) => ({ label: String(r.label), lat: Number(r.lat), lng: Number(r.lng) }));
 }
