@@ -183,6 +183,7 @@ export default function Wizard() {
     try {
       setD(fromSample(await (which === "bls" ? getBls() : getExample()), refs));
       go(which === "bls" ? 0 : steps.length - 1);
+      setSeen(steps.length - 1); // every step is filled in, so let the user jump anywhere
     } catch {
       setNote(`Couldn't load the ${which === "bls" ? "BLS data" : "sample"}. ${offline}`);
     }

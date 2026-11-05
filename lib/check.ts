@@ -58,6 +58,8 @@ export function checkStep(step: Step, d: Draft, ref: Ref, level: Level = "mid"):
     }
     const tm = d.mats.filter((m) => m.kind === "tm65").map((m) => m.name);
     if (new Set(tm).size !== tm.length) e.mats = "Each TM65 material can only be listed once.";
+    const ice = d.mats.filter((m) => m.kind === "ice").map((m) => m.name);
+    if (new Set(ice).size !== ice.length) e.mats = "Each material can only be listed once. Combine the duplicate shares into one row.";
     if (d.mats.filter((m) => m.kind === "ice").length > ICE_SLOTS(ref)) e.mats = `You can add up to ${ICE_SLOTS(ref)} materials from the "More materials" list.`;
     if (d.mats.length && !e.mats) {
       const t = share(d);

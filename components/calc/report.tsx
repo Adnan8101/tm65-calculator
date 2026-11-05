@@ -127,9 +127,12 @@ export default function ReportView({ res, err, d, level, onBack, onNew, extra }:
               <p className="text-[13px] font-medium text-ink-2">Total embodied carbon</p>
               <p className="mt-2 text-5xl font-semibold tracking-tight text-ink sm:text-6xl print:mt-1 print:text-4xl">{f(total, total >= 100 ? 0 : 2)}</p>
               <p className="mt-1 text-base text-muted">kgCO₂e</p>
-              <p className="mt-6 max-w-sm leading-relaxed text-ink-2 print:mt-3">
-                <span className="font-medium text-ink">{lead.name}</span> ({lead.code}) is the largest contributor, at {p(lead.value / total)} of the total.
-              </p>
+              {total > 0 && lead.value > 0 && (
+                <p className="mt-6 max-w-sm leading-relaxed text-ink-2 print:mt-3">
+                  <span className="font-medium text-ink">{lead.name}</span> ({lead.code}) is the largest contributor, at {p(lead.value / total)} of the total.
+                </p>
+              )}
+              {total <= 0 && <p className="mt-6 max-w-sm leading-relaxed text-ink-2 print:mt-3">The total is negative because stored biogenic carbon in the timber materials outweighs the emissions.</p>}
             </div>
             <dl className="grid grid-cols-2">
               {[
@@ -251,8 +254,8 @@ export default function ReportView({ res, err, d, level, onBack, onNew, extra }:
                 </tr>
               </thead>
               <tbody>
-                {mats.map((m) => (
-                  <tr key={m.name} className="border-b border-line last:border-0">
+                {mats.map((m, i) => (
+                  <tr key={`${i}:${m.name}`} className="border-b border-line last:border-0">
                     <td className="py-2.5 pr-4 text-ink">{m.name}</td>
                     <td className="py-2.5 text-right font-mono tabular-nums text-ink-2">{p(m.share)}</td>
                     <td className="py-2.5 pl-6">

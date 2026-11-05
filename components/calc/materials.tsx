@@ -131,11 +131,12 @@ function MatModal({ open, mat, d, refs, level, onClose, onSave }: { open: boolea
   const { f } = useDp();
   const others = d.mats.filter((m) => m.id !== mat?.id);
   const used = new Set(others.filter((m) => m.kind === "tm65").map((m) => m.name));
+  const usedIce = new Set(others.filter((m) => m.kind === "ice").map((m) => m.name));
   const full = others.filter((m) => m.kind === "ice").length >= ICE_SLOTS(refs);
   const rest = 100 - others.reduce((s, m) => s + (toNum(m.pct) || 0), 0);
   const options: Opt[] = [
     ...refs.slots.filter((s) => s.locked).map((s) => ({ value: `t:${s.name}`, label: s.name, group: "Common materials", disabled: used.has(s.name), note: used.has(s.name) ? "Added" : undefined })),
-    ...refs.extra.map((x, i) => ({ value: `i:${i}`, label: x, group: "More materials", disabled: full && pick !== `i:${i}` })),
+    ...refs.extra.map((x, i) => ({ value: `i:${i}`, label: x, group: "More materials", disabled: usedIce.has(x) || (full && pick !== `i:${i}`), note: usedIce.has(x) ? "Added" : undefined })),
   ];
 
   const submit = () => {
