@@ -216,7 +216,6 @@ export function Combo({ id, value, onChange, options, placeholder = "Select…",
           setHi(0);
           if (!open) setOpen(true);
         }}
-        onFocus={show}
         onClick={() => !open && show()}
         onKeyDown={key}
         onBlur={() => setOpen(false)}
@@ -347,8 +346,14 @@ export function Modal({ open, onClose, title, sub, wide, onSubmit, children, foo
     document.addEventListener("keydown", key);
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-    setTimeout(() => panel.current?.querySelector<HTMLElement>("input:not([disabled]), select, button[role=radio]")?.focus(), 40);
+    // Focus the first field for mouse/keyboard users; skip on touch so the keyboard doesn't pop up uninvited.
+    const fine = window.matchMedia?.("(pointer: fine)").matches;
+    const t = setTimeout(() => {
+      const first = panel.current?.querySelector<HTMLElement>("input:not([disabled]), select, button[role=radio]");
+      if (fine && first && !panel.current?.contains(document.activeElement)) first.focus();
+    }, 40);
     return () => {
+      clearTimeout(t);
       document.removeEventListener("keydown", key);
       document.body.style.overflow = prev;
       back?.focus?.();
@@ -380,6 +385,8 @@ export function Modal({ open, onClose, title, sub, wide, onSubmit, children, foo
             noValidate
             onSubmit={(e) => {
               e.preventDefault();
+              // React bubbles submit through the portal to the wizard's <form>; don't advance the step.
+              e.stopPropagation();
               onSubmit();
             }}
           >
