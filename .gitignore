@@ -38,6 +38,7 @@ yarn-error.log*
 
 # internal docs (not deployed)
 /ARCHITECTURE.md
+/docs/
 
 # typescript
 *.tsbuildinfo
